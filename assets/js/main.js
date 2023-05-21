@@ -9,7 +9,7 @@ const selectElement = selector =>  {
 // Nav styles on scroll
 const scrollHeader = () => {
      const headerElement = selectElement('#header');
-     if(this.scrollY >= 100 || this.scrollY >= 1) {
+     if(this.scrollY >= 100 || this.scrollY >= 200) {
          headerElement.classList.add('activated');
          
      } else {
@@ -33,7 +33,7 @@ menuToggleIcon.addEventListener('click', toggleMenu)
 
 
 // Close the search form popup on ESC keypress
-window.addEventListener ('keyup', event=>{
+window.addEventListener ('keyup', event=> {
     if(event.key === 'Escape') searchFromContainer.classList.remove('activated')
 })
 
@@ -55,7 +55,6 @@ const currentTheme = localStorage.getItem('currentTheme');
              } else {
                  localStorage.removeItem('themeActive');
              };
-         
      });
 
      
