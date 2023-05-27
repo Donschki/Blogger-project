@@ -406,6 +406,8 @@ header.activated {
 .article-title {
     font-size: var(--font-size-md);
 }
+
+
 /* Featured articles - Sidebar */
 .sidebar {
     background-color: var(--secondary-background-color);
@@ -432,10 +434,73 @@ header.activated {
 
 .featured-content-title {
     font-size: var(--font-size-md);
+    text-align: center;
+    padding: 1rem;
 }
 
+.trending-number {
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    z-index: 15;
+    width: 3rem;
+    height: 3rem;
 
+    border-radius: 50%;
+    color: var(--light-color);
+    background-color: var(--secondary-background-color);
+}
 
+.trending-news-data .article title {
+    font-size: var(--font-size-sm);
+}
+
+.trending-news-box:hover .article-title {
+    color: var(--light-color-alt);
+}
+
+.section-title {
+    position: relative;
+    font-size: var(--font-size-md);
+    margin-bottom: 6rem;
+}
+
+.section-title::before {
+    content: attr(data-name);
+    font-size: var(--font-size-lg);
+    text-transform: uppercase;
+    opacity: .1;
+    position: absolute;
+    top: 1.5rem;
+    left: 2rem;
+}
+
+.article.swiper-slide {
+    height: 40rem;
+}
+
+.swiper-wrapper {
+    height: auto;
+}
+
+.swiper-controls {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: var(--secondary-background-color)
+}
+
+.swiper-controls::after {
+    font-size: 1.6rem;
+    color: var(--light-color);
+}
+
+.swiper-pagination {
+    bottom: .5rem !important;
+}
+
+.swiper-pagination-bullet {
+    background-color: var(--light-color);
+}
 /* Quick read */
 
 /* Quick read - Swiper */

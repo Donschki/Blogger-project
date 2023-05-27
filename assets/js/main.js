@@ -1,4 +1,4 @@
-// Grab elements
+ // Grab elements
 const selectElement = selector =>  {
      const element = document.querySelector(selector)
      if (element) return(element)
@@ -6,18 +6,18 @@ const selectElement = selector =>  {
 };
 
 
-// Nav styles on scroll
-const scrollHeader = () => {
-     const headerElement = selectElement('#header');
-     if(this.scrollY >= 100 || this.scrollY >= 200) {
-         headerElement.classList.add('activated');
+// // Nav styles on scroll
+// const scrollHeader = () => {
+//      const headerElement = selectElement('#header');
+//      if(this.scrollY >= 100 || this.scrollY >= 200) {
+//          headerElement.classList.add('activated');
          
-     } else {
-         headerElement.classList.remove('activated');
-     };
-};
+//      } else {
+//          headerElement.classList.remove('activated');
+//      };
+// };
 
-window.addEventListener('scroll', scrollHeader);
+// window.addEventListener('scroll', scrollHeader);
 
 
 // Open menu & search pop-up
@@ -69,3 +69,25 @@ formCloseBtn.addEventListener ('click', () => searchFromContainer.classList.remo
 
 
 // Swiper
+
+const swiper = new Swiper('.swiper', {
+    slidesPerView : 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+    },
+    pagination: {
+        el:'.swiper-pagination'
+    },
+    breakpoints : {
+        700: {
+        slidesPerView : 2,
+            
+        },
+        1200: {
+        slidesPerView : 3,
+            
+        }
+    }
+});
