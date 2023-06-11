@@ -911,7 +911,7 @@ body.light-theme{
     }
 }
 
-@media screen and (min-width: 1500PX) {
+@media screen and (min-width: 1500px) {
     .featured-article {
         grid-column: 3/-1;
     }
