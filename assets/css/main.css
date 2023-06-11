@@ -623,10 +623,10 @@ body.light-theme{
     gap: var(--gap);
 }
 
-.company-data{
+.company-data {
     display: flex;
     flex-direction: column;
-    order: 1;
+    order: 0;
 }
 
 .company-description{
@@ -754,6 +754,8 @@ body.light-theme{
     margin-bottom: 0;
 }
 
+/*Media Queries*/
+
 @media screen and (min-width: 700px) {
 
 .trending-news-box{
@@ -783,7 +785,7 @@ body.light-theme{
     grid-template-columns: repeat(2, 1fr);
 }
 
-.company-data{
+.company-data {
     order: 0;
 }
 
@@ -819,15 +821,86 @@ body.light-theme{
 }
 
 .older-posts .article{
-        grid-template-columns: 25rem 1fr;
-        
+     grid-template-columns: 25rem 1fr;
 }
 
 .older-posts-article-image-wrapper{
-        height: auto;
+     height: auto;
 }
 
 .blog-post-data img{
-        height: var(--item-min-height-md);;
+        height: var(--item-min-height-md);
 }
+}
+
+@media screen and (min-width: 1024px) {
+    .menu {
+        position: initial;
+        width: initial;
+        padding: initial;
+        background-color: transparent;
+        opacity: initial;
+        transform: initial;
+    }
+
+    .menu > .list {
+        flex-direction: row;
+    }
+
+    .screen-lg-hidden {
+        display: none;
+    }
+
+    .screen-sm-hidden {
+        display: block;
+    }
+
+    .sign-up-btn {
+        padding: .4rem;
+    }
+
+    .sign-up-btn.fancy-border:hover::before {
+        animation: animate_border .75s linear infinite;
+    }
+
+    @keyframes animate_border {
+        to {
+            transform: translateX(-50%);
+        }
+    }
+
+    .featured-articles-container {
+        grid-template-columns: 1fr 40rem;
+    }
+
+    .trending-news-image-box {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .popular-tags-container {
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .company-data {
+        grid-column: span 2;
+    }
+
+    .company-description {
+        max-width: 85%;
+    }
+
+    .copyright-notice {
+        margin-top: auto;
+    }
+
+    .blog-post-data img{
+        height: 40rem;
+    }
+
 }
